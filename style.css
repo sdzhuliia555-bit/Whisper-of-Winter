@@ -12,7 +12,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 15px 50px;
-  background-color: #556B2F; /* классический тёмно-оливковый */
+  background-color: #556B2F; /* тёмно-оливковый */
   color: white;
   position: sticky;
   top: 0;
@@ -40,21 +40,21 @@ body {
   text-decoration: none;
 }
 .nav-links li a:hover {
-  color: #C0A060; /* золотистый оттенок при наведении */
+  color: #C0A060; /* золотистый акцент */
 }
 
 /* === Баннер === */
 .banner {
   position: relative;
-  background-color: #556B2F; /* классический тёмно-оливковый */
+  background-color: #556B2F; /* тёмно-оливковый */
   height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .banner-overlay {
-  background-color: rgba(255, 255, 240, 0.85); /* светлый оверлей для текста */
-  color: #333333;
+  background-color: rgba(0, 0, 0, 0.4); /* затемнённый оверлей для контраста текста */
+  color: #ffffff; /* белый текст */
   padding: 30px;
   border-radius: 8px;
   text-align: center;
@@ -73,12 +73,12 @@ body {
   max-width: 900px;
   margin: 50px auto;
   padding: 30px 20px;
-  background-color: #f9f9f9;
+  background-color: #f9f9f9; /* светлая секция для контраста */
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 .section h2 {
-  color: #556B2F; /* тёмно-оливковый для заголовков */
+  color: #556B2F; /* тёмно-оливковый */
   text-align: center;
   margin-bottom: 20px;
 }
@@ -99,12 +99,13 @@ body {
   height: 180px;
   object-fit: cover;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3); /* тень для видимости */
   transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #fff; /* светлая подложка для контраста */
 }
 .animal-images img:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
 }
 
 /* === Контактная форма === */
@@ -127,14 +128,14 @@ body {
   padding: 12px;
   border-radius: 6px;
   border: none;
-  background-color: #556B2F; /* кнопка в тон баннера */
+  background-color: #556B2F;
   color: white;
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
 }
 .contact-form button:hover {
-  background-color: #C0A060; /* золотистый оттенок при наведении */
+  background-color: #C0A060;
 }
 
 /* === Футер === */
