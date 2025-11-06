@@ -13,7 +13,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #0d1a33;
-  padding: 10px 0;
+  padding: 15px 0;
   color: white;
 }
 .logo-img {
@@ -22,32 +22,38 @@ body {
   border-radius: 8px;
   margin-right: 10px;
   object-fit: cover;
+  vertical-align: middle;
+}
+.navbar span {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-/* Фото животных */
+/* Фото */
+.photo-section {
+  width: 100%;
+  overflow: hidden;
+}
 .animal-image {
   width: 100%;
-  max-width: 100%;
   height: auto;
   display: block;
+  border-radius: 10px;
   margin: 20px 0;
-  border-radius: 8px;
 }
 
-/* Секции */
-section {
+/* Секции информации */
+.info-section {
   padding: 30px 10%;
 }
-
-section h2 {
+.info-section h2 {
   margin-bottom: 15px;
 }
-
-section p {
+.info-section p {
   margin-bottom: 15px;
+  font-size: 1.1rem;
 }
-
-ul {
+.info-section ul {
   list-style: disc;
   margin: 0 auto 20px auto;
   padding-left: 20px;
@@ -63,7 +69,6 @@ ul {
   max-width: 400px;
   margin: 0 auto;
 }
-
 .contact-form input,
 .contact-form textarea {
   padding: 10px;
@@ -73,7 +78,6 @@ ul {
   width: 100%;
   box-sizing: border-box;
 }
-
 .contact-form button {
   padding: 10px;
   background-color: #0d1a33;
@@ -82,7 +86,6 @@ ul {
   border-radius: 5px;
   cursor: pointer;
 }
-
 .contact-form button:hover {
   background-color: #11254d;
 }
@@ -91,6 +94,6 @@ ul {
 footer {
   background-color: #0d1a33;
   color: white;
-  padding: 15px;
-  margin-top: 30px;
+  padding: 20px;
+  font-size: 0.9rem;
 }
