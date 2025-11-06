@@ -3,13 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Питание животных и биохимия</title>
+  <title>DogsCats — питание животных</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
   <!-- Навигация -->
   <nav class="navbar">
-    <div class="logo">BioPetNutrition</div>
+    <div class="logo">
+      <img src="images/logo.png" alt="DogsCats Logo" class="logo-img">
+      DogsCats
+    </div>
     <ul class="nav-links">
       <li><a href="#home">Главная</a></li>
       <li><a href="#biochemistry">Биохимия</a></li>
@@ -20,8 +24,8 @@
   </nav>
 
   <!-- Баннер -->
-  <section class="banner">
-    <img src="images/banner.jpg" alt="Здоровое питание собак и кошек">
+  <section class="banner" id="home">
+    <img src="images/banner-sea.jpg" alt="Здоровое питание собак и кошек">
     <div class="banner-text">
       <h1>Питание животных и биохимия</h1>
       <p>Научно обоснованные рекомендации для здоровья собак и кошек</p>
@@ -34,25 +38,11 @@
       <h2>Основы биохимии питания</h2>
       <p>
         Питание животных включает баланс макро- и микронутриентов, необходимых для нормального метаболизма и поддержания здоровья.
-        Белки, жиры, углеводы, витамины и минералы выполняют ключевые функции в организме и должны соответствовать виду и возрасту животного.
+        Белки, жиры, углеводы, витамины и минералы выполняют ключевые функции в организме.
       </p>
       <div class="animal-images">
-        <img src="images/dog.jpg" alt="Собака">
-        <img src="images/cat.jpg" alt="Кошка">
-      </div>
-      <div class="cards">
-        <div class="card">
-          <h3>Белки</h3>
-          <p>Необходимы для синтеза тканей, ферментов и гормонов. Источники: мясо, рыба, яйца.</p>
-        </div>
-        <div class="card">
-          <h3>Жиры</h3>
-          <p>Источники энергии и жирорастворимых витаминов. Источники: рыбий жир, растительные масла.</p>
-        </div>
-        <div class="card">
-          <h3>Углеводы</h3>
-          <p>Обеспечивают основной источник энергии. Источники: зерновые, овощи, фрукты.</p>
-        </div>
+        <img src="media/dog1.jpg" alt="Собака">
+        <img src="media/cat1.jpg" alt="Кошка">
       </div>
     </section>
 
@@ -66,7 +56,7 @@
       <ul>
         <li>Диета при хронической болезни почек у собак</li>
         <li>Контроль массы тела у кошек</li>
-        <li>Рационы для животных в зоопарках и питомниках</li>
+        <li>Рационы для животных в питомниках</li>
       </ul>
     </section>
 
@@ -74,30 +64,20 @@
     <section id="practical" class="section">
       <h2>Практические рекомендации</h2>
       <p>
-        При составлении рациона необходимо учитывать: вид животного, возраст, уровень активности и наличие заболеваний.
-        Чтение состава корма и контроль качества ингредиентов являются обязательными.
+        При составлении рациона учитывайте вид животного, возраст, уровень активности и наличие заболеваний.
+        Контроль качества ингредиентов является обязательным.
       </p>
       <div class="animal-images">
-        <img src="images/dog2.jpg" alt="Собака ест">
-        <img src="images/cat2.jpg" alt="Кошка ест">
-      </div>
-      <div class="cards">
-        <div class="card">
-          <h3>Состав кормов</h3>
-          <p>Белки животного происхождения должны быть основным источником аминокислот.</p>
-        </div>
-        <div class="card">
-          <h3>Добавки</h3>
-          <p>Омега-3 жирные кислоты, антиоксиданты и пробиотики положительно влияют на здоровье.</p>
-        </div>
+        <img src="media/dog2.jpg" alt="Собака ест">
+        <img src="media/cat2.jpg" alt="Кошка ест">
       </div>
     </section>
 
     <!-- Контакты -->
     <section id="contact" class="section">
       <h2>Контакты</h2>
-      <p>Свяжитесь с нами для вопросов или профессиональных консультаций.</p>
-      <form action="https://formspree.io/f/yourformid" method="POST" id="contact-form">
+      <p>Свяжитесь с нами для вопросов или консультаций.</p>
+      <form action="https://formspree.io/f/yourformid" method="POST">
         <input type="text" name="name" placeholder="Ваше имя" required>
         <input type="email" name="_replyto" placeholder="Ваш Email" required>
         <textarea name="message" placeholder="Сообщение" required></textarea>
@@ -107,9 +87,7 @@
   </main>
 
   <footer>
-    <p>© 2025 BioPetNutrition · Научная информация для здоровья животных</p>
+    <p>© 2025 DogsCats · Научная информация для здоровья животных</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
