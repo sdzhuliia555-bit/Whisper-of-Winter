@@ -3,15 +3,14 @@ body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
   background: #ffffff;
-  color: #333;
+  color: #000; /* черный текст */
 }
 
-/* Навигация */
+/* Шапка */
 .navbar {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  background: #0d1a33;
+  background: #0d1a33; /* темно-синий */
   padding: 10px 20px;
   color: white;
 }
@@ -30,24 +29,20 @@ body {
   margin: 0 auto;
   text-align: center;
 }
-
-/* Заголовки */
 .section h2 {
   font-size: 2rem;
   margin-bottom: 20px;
 }
-
-/* Абзацы и списки */
 .section p,
 .section ul li {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: #000; /* черный текст */
   margin-bottom: 15px;
 }
 .section ul {
   list-style: disc;
   padding-left: 20px;
+  text-align: left;
 }
 
 /* Галерея животных */
@@ -109,5 +104,8 @@ footer {
   .animal-images {
     flex-direction: column;
     align-items: center;
+  }
+  .section ul {
+    text-align: center;
   }
 }
