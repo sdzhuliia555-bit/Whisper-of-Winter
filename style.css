@@ -1,5 +1,4 @@
-/* Общие стили */
-body {
+/* Общие стили */body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
   background: #f8f9fa;
@@ -40,6 +39,7 @@ body {
   display: block;
   border-radius: 10px;
   margin: 20px 0;
+  object-fit: cover;
 }
 
 /* Секции информации */
@@ -67,7 +67,7 @@ body {
   flex-direction: column;
   gap: 10px;
   max-width: 400px;
-  margin: 0 auto;
+  margin: 0 auto 50px; /* добавляем отступ снизу для футера */
 }
 .contact-form input,
 .contact-form textarea {
@@ -96,4 +96,5 @@ footer {
   color: white;
   padding: 20px;
   font-size: 0.9rem;
+  margin-top: 50px;
 }
