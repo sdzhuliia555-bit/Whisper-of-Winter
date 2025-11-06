@@ -28,7 +28,7 @@ body {
 
 main {
   padding: 20px 10%;
-  text-align: center;
+  text-align: center; /* Центровка всего текста в main */
 }
 
 h2 {
@@ -43,8 +43,9 @@ p {
 ul {
   max-width: 800px;
   margin: 0 auto 20px auto;
-  padding-left: 20px;
-  text-align: left;
+  padding-left: 0; /* Убираем отступ слева */
+  list-style-position: inside; /* Чтобы маркеры внутри */
+  text-align: center; /* Центровка списка */
 }
 
 li {
@@ -70,12 +71,14 @@ li {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  text-align: center; /* Центровка текста формы */
 }
 .contact-form input, .contact-form textarea {
   padding: 10px;
   font-size: 1rem;
   border-radius: 5px;
   border: 1px solid #999;
+  text-align: center; /* Центровка текста внутри полей */
 }
 .contact-form button {
   padding: 10px;
