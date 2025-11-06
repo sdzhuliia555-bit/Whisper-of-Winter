@@ -1,17 +1,18 @@
+/* === Общие стили === */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #ffffff;
   color: #333333;
 }
 
-/* Навигация */
+/* === Навигация === */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 50px;
-  background-color: #3E5C3C; /* темно-оливковый */
+  background-color: #556B2F; /* классический тёмно-оливковый */
   color: white;
   position: sticky;
   top: 0;
@@ -22,11 +23,11 @@ body {
   align-items: center;
   gap: 10px;
   font-weight: bold;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 .navbar .logo-img {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
 }
 .nav-links li {
@@ -36,55 +37,56 @@ body {
 .nav-links li a {
   color: white;
   font-weight: bold;
+  text-decoration: none;
 }
 .nav-links li a:hover {
-  color: #16A085;
+  color: #C0A060; /* золотистый оттенок при наведении */
 }
 
-/* Баннер */
+/* === Баннер === */
 .banner {
   position: relative;
+  background-color: #556B2F; /* классический тёмно-оливковый */
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner-overlay {
+  background-color: rgba(255, 255, 240, 0.85); /* светлый оверлей для текста */
+  color: #333333;
+  padding: 30px;
+  border-radius: 8px;
   text-align: center;
 }
-.banner-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
+.banner-overlay h1 {
+  margin: 0 0 10px;
+  font-size: 2.5rem;
 }
-.banner-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
-}
-.banner-text h1 {
-  font-size: 2.8rem;
-}
-.banner-text p {
+.banner-overlay p {
+  margin: 0;
   font-size: 1.2rem;
 }
 
-/* Секции */
+/* === Секции === */
 .section {
   max-width: 900px;
   margin: 50px auto;
   padding: 30px 20px;
-  background-color: #f8f8f8;
+  background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 .section h2 {
-  color: #1B4F72; /* морской синий */
+  color: #556B2F; /* тёмно-оливковый для заголовков */
   text-align: center;
+  margin-bottom: 20px;
 }
 .section ul {
   padding-left: 20px;
 }
 
-/* Галерея */
+/* === Галерея животных === */
 .animal-images {
   display: flex;
   justify-content: center;
@@ -96,15 +98,16 @@ body {
   width: 280px;
   height: 180px;
   object-fit: cover;
-  border-radius: 6px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  transition: transform 0.3s;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 .animal-images img:hover {
   transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
-/* Контактная форма */
+/* === Контактная форма === */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -124,20 +127,20 @@ body {
   padding: 12px;
   border-radius: 6px;
   border: none;
-  background-color: #16A085;
+  background-color: #556B2F; /* кнопка в тон баннера */
   color: white;
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
 }
 .contact-form button:hover {
-  background-color: #1B4F72;
+  background-color: #C0A060; /* золотистый оттенок при наведении */
 }
 
-/* Футер */
+/* === Футер === */
 footer {
   text-align: center;
   padding: 30px 20px;
-  background-color: #3E5C3C;
+  background-color: #556B2F;
   color: white;
 }
