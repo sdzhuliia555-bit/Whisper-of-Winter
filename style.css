@@ -1,17 +1,17 @@
-/* Общий стиль */
+/* === Общие стили === */
 body {
-  font-family: 'Segoe UI', sans-serif;
   margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f8f9fa;
   color: #333;
 }
 
-/* Навигация */
+/* === Навигация === */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #133b5c;
+  background-color: #0d1a33; /* темно-синий */
   padding: 10px 40px;
   color: white;
 }
@@ -47,7 +47,7 @@ body {
   text-decoration: underline;
 }
 
-/* Баннер */
+/* === Баннер === */
 .banner {
   position: relative;
   text-align: center;
@@ -58,7 +58,7 @@ body {
   width: 100%;
   height: 350px;
   object-fit: cover;
-  filter: brightness(60%);
+  filter: brightness(40%); /* затемнение для читаемости текста */
 }
 
 .banner-text {
@@ -69,32 +69,35 @@ body {
 }
 
 .banner-text h1 {
-  font-size: 2.5em;
+  font-size: 2.5rem;
   margin: 0;
 }
 
 .banner-text p {
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
-/* Разделы */
+/* === Секции === */
 .section {
   padding: 50px 10%;
   text-align: center;
+  color: #fff;
 }
 
-/* Темные баннеры */
+/* Темно-синие баннеры для секций */
 .dark-banner {
-  background-color: #1e3d59;
-  color: white;
+  background-color: #0b2240; /* насыщенный темно-синий */
+  color: #fff;
+  padding: 60px 10%;
 }
 
 .dark-banner-alt {
-  background-color: #2b4d3a;
-  color: white;
+  background-color: #102a4d; /* немного другой темный оттенок */
+  color: #fff;
+  padding: 60px 10%;
 }
 
-/* Изображения */
+/* Галерея животных */
 .animal-images {
   display: flex;
   justify-content: center;
@@ -108,10 +111,10 @@ body {
   height: 180px;
   object-fit: cover;
   border-radius: 8px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.5);
 }
 
-/* Форма */
+/* Контактная форма */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -128,7 +131,7 @@ body {
 }
 
 .contact-form button {
-  background-color: #133b5c;
+  background-color: #0d1a33;
   color: white;
   padding: 10px;
   border: none;
@@ -137,13 +140,13 @@ body {
 }
 
 .contact-form button:hover {
-  background-color: #145c7a;
+  background-color: #11254d;
 }
 
-/* Подвал */
+/* Футер */
 footer {
   text-align: center;
-  background-color: #133b5c;
+  background-color: #0d1a33;
   color: white;
   padding: 15px;
   margin-top: 40px;
