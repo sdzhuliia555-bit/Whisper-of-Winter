@@ -10,16 +10,16 @@
 <body>
 
   <!-- Шапка с логотипом -->
-  <header class="navbar">
+  <nav class="navbar">
     <div class="logo">
       <img src="logo.jpg" alt="DogsCats Logo" class="logo-img">
       <span>DogsCats</span>
     </div>
-  </header>
+  </nav>
 
   <main>
-    <!-- Биохимия питания -->
-    <section id="biochemistry" class="section">
+    <!-- Основной контент -->
+    <section class="section">
       <h2>Биохимия питания</h2>
       <p>Понимание биохимических процессов — ключ к здоровью питомца.</p>
       <ul>
@@ -29,33 +29,24 @@
         <li><strong>Минералы и витамины:</strong> баланс нервной и костной систем</li>
       </ul>
 
-      <!-- Фото животных -->
       <div class="animal-images">
         <img src="dog2.jpg" alt="Собака">
         <img src="cat2.jpg" alt="Кошка">
       </div>
     </section>
 
-    <!-- Контактная форма через Formspree -->
+    <!-- Контактная форма -->
     <section id="contact" class="section">
       <h2>Свяжитесь с нами</h2>
-      <p>Оставьте свой email, чтобы получать советы по питанию собак и кошек.</p>
-      
       <form action="https://formspree.io/f/xovpgygo" method="POST" class="contact-form">
-        <div class="form-group">
-          <label for="name">Ваше имя</label>
-          <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
-        </div>
+        <label for="name">Ваше имя</label>
+        <input type="text" id="name" name="name" placeholder="Ваше имя" required>
 
-        <div class="form-group">
-          <label for="email">Ваш Email</label>
-          <input type="email" id="email" name="_replyto" placeholder="Введите ваш Email" required>
-        </div>
+        <label for="email">Ваш Email</label>
+        <input type="email" id="email" name="_replyto" placeholder="Ваш Email" required>
 
-        <div class="form-group">
-          <label for="message">Сообщение</label>
-          <textarea id="message" name="message" rows="5" placeholder="Ваше сообщение (по желанию)"></textarea>
-        </div>
+        <label for="message">Сообщение</label>
+        <textarea id="message" name="message" rows="5" placeholder="Ваше сообщение" required></textarea>
 
         <button type="submit">Отправить</button>
       </form>
