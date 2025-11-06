@@ -2,53 +2,118 @@
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
-  background: #ffffff; /* белый фон */
-  color: #000; /* черный текст */
-  line-height: 1.6;
-  text-align: center; /* текст по центру */
+  background: #f8f9fa;
+  color: #000;
 }
 
 /* === Навигация / Шапка === */
 .navbar {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  background: #0d1a33; /* темно-синий фон */
-  padding: 15px 20px;
+  background: #0d1a33; /* темно-синий */
+  padding: 10px 20px;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
 }
 
 .logo-img {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 8px;
   object-fit: cover;
+  margin-right: 10px;
 }
 
-/* === Секция с фото животных === */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* === Секции === */
 .section {
   padding: 50px 10%;
-  margin: 20px auto;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background: #fff;
+  color: #000;
+  text-align: center;
 }
 
 .section h2 {
+  margin-bottom: 20px;
   font-size: 2rem;
-  margin-bottom: 30px;
 }
 
-/* Галерея животных */
+.section ul {
+  list-style: disc;
+  padding-left: 20px;
+  text-align: left;
+  display: inline-block;
+}
+
+/* === Галерея животных === */
 .animal-images {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
   flex-wrap: wrap;
+  margin-top: 25px;
 }
 
 .animal-images img {
-  width: 300px;
-  height: 200px;
+  width: 280px;
+  height: 180px;
   object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+/* === Контактная форма === */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background: #0d1a33;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #11254d;
 }
 
 /* === Футер === */
@@ -60,10 +125,19 @@ footer {
   font-size: 0.9rem;
 }
 
-/* === Адаптивность === */
+/* === Адаптив === */
 @media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
   .animal-images img {
     width: 90%;
     height: auto;
+  }
+
+  .section {
+    padding: 30px 5%;
   }
 }
