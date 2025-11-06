@@ -3,72 +3,53 @@ body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
   background: #f8f9fa;
-  color: #000;
-  text-align: center;
+  color: #333;
 }
 
 /* Шапка */
 .navbar {
   display: flex;
   align-items: center;
-  background: #0d1a33;
+  background-color: #0d1a33; /* темно-синий */
   padding: 10px 20px;
   color: white;
-  justify-content: center;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
 }
 
 .logo-img {
   width: 50px;
   height: 50px;
-  object-fit: cover;
   border-radius: 8px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.logo span {
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 /* Секции */
 .section {
-  padding: 40px 20px;
-  max-width: 900px;
-  margin: 0 auto;
+  padding: 40px 10%;
 }
 
+/* Текст */
 .section h2 {
-  margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 .section p, .section ul {
-  margin-bottom: 20px;
+  text-align: center;
 }
 
-.section ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.section ul li {
-  margin-bottom: 10px;
-}
-
-/* Галерея животных */
-.animal-images {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-top: 25px;
-}
-
+/* Галерея / фото */
 .animal-images img {
-  width: 736px;
-  height: 460px;
-  object-fit: cover;
+  width: 100%;      /* растягиваем по ширине блока */
+  height: auto;     /* сохраняем пропорции */
+  display: block;   /* убираем лишние пробелы под картинкой */
   border-radius: 8px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
 }
 
 /* Контактная форма */
@@ -76,16 +57,15 @@ body {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  max-width: 450px;
+  max-width: 500px;
   margin: 0 auto;
 }
 
-.contact-form input,
-.contact-form textarea {
+.contact-form input, .contact-form textarea {
   padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #999;
+  border: 1px solid #ccc;
   border-radius: 5px;
+  font-size: 1rem;
 }
 
 .contact-form button {
@@ -104,21 +84,8 @@ body {
 /* Футер */
 footer {
   text-align: center;
+  padding: 20px;
   background-color: #0d1a33;
   color: white;
-  padding: 15px;
-  margin-top: 30px;
-}
-
-/* Адаптив */
-@media (max-width: 600px) {
-  .animal-images img {
-    width: 90%;
-    height: auto;
-  }
-
-  .navbar {
-    flex-direction: column;
-    gap: 10px;
-  }
+  font-size: 0.9rem;
 }
