@@ -1,23 +1,23 @@
+/* Общие стили */
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
-  background: #f8f9fa;
-  color: #000;
+  background: #ffffff;
+  color: #000000;
 }
 
+/* Шапка / навигация */
 .navbar {
   display: flex;
   align-items: center;
-  background: #0d1a33;
   padding: 10px 20px;
+  background-color: #0b2240; /* темно-синий */
   color: white;
 }
-
 .logo {
   display: flex;
   align-items: center;
 }
-
 .logo-img {
   width: 50px;
   height: 50px;
@@ -25,53 +25,39 @@ body {
   object-fit: cover;
   margin-right: 10px;
 }
-
 .logo span {
   font-size: 1.5rem;
   font-weight: bold;
 }
 
+/* Секции */
 .section {
-  padding: 40px 20px;
   max-width: 900px;
-  margin: 30px auto;
-  background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  margin: 40px auto;
+  padding: 20px;
   text-align: center;
 }
-
 .section h2 {
-  font-size: 2rem;
   margin-bottom: 15px;
 }
-
 .section p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
-
 .section ul {
   list-style-type: disc;
+  margin: 0 auto 20px auto;
   padding-left: 20px;
   text-align: left;
-  max-width: 600px;
-  margin: 0 auto 20px auto;
+  display: inline-block;
 }
 
-.section ul li {
-  margin-bottom: 10px;
-}
-
+/* Галерея животных */
 .animal-images {
   display: flex;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
-  margin-top: 20px;
 }
-
 .animal-images img {
   width: 280px;
   height: 180px;
@@ -80,22 +66,48 @@ body {
   box-shadow: 0 3px 8px rgba(0,0,0,0.3);
 }
 
+/* Контактная форма */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.contact-form button {
+  padding: 10px;
+  background-color: #0b2240;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.contact-form button:hover {
+  background-color: #11254d;
+}
+
+/* Футер */
 footer {
   text-align: center;
   padding: 15px;
-  background: #0d1a33;
-  color: white;
-  margin-top: 20px;
+  background-color: #f2f2f2;
+  color: #000000;
 }
 
+/* Адаптив */
 @media (max-width: 600px) {
   .animal-images {
     flex-direction: column;
     align-items: center;
   }
-
   .section ul {
-    text-align: left;
-    padding-left: 15px;
+    text-align: center;
   }
 }
