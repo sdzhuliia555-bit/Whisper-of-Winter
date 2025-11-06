@@ -10,11 +10,10 @@ body {
 .navbar {
   display: flex;
   align-items: center;
-  background-color: #0d1a33; /* темно-синий */
+  background: #0d1a33;
   padding: 10px 20px;
   color: white;
 }
-
 .logo-img {
   width: 50px;
   height: 50px;
@@ -22,70 +21,85 @@ body {
   object-fit: cover;
   margin-right: 10px;
 }
-
 .logo span {
-  font-weight: bold;
   font-size: 1.5rem;
+  font-weight: bold;
 }
 
-/* Секции */
-.section {
-  padding: 40px 10%;
-}
-
-/* Текст */
-.section h2 {
+main {
+  padding: 20px 10%;
   text-align: center;
+}
+
+h2 {
+  margin-top: 30px;
+}
+
+p {
   margin-bottom: 15px;
+  font-size: 1.1rem;
 }
 
-.section p, .section ul {
-  text-align: center;
+ul {
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+  padding-left: 20px;
+  text-align: left;
 }
 
-/* Галерея / фото */
-.animal-images img {
-  width: 100%;      /* растягиваем по ширине блока */
-  height: auto;     /* сохраняем пропорции */
-  display: block;   /* убираем лишние пробелы под картинкой */
-  border-radius: 8px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+/* Фото животных */
+.animal-image {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  margin-bottom: 30px;
 }
 
 /* Контактная форма */
 .contact-form {
+  max-width: 500px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 15px;
-  max-width: 500px;
-  margin: 0 auto;
 }
-
 .contact-form input, .contact-form textarea {
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
   font-size: 1rem;
-}
-
-.contact-form button {
-  background-color: #0d1a33;
-  color: white;
-  padding: 10px;
-  border: none;
   border-radius: 5px;
+  border: 1px solid #999;
+}
+.contact-form button {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  background: #0d1a33;
+  color: white;
   cursor: pointer;
 }
-
 .contact-form button:hover {
-  background-color: #11254d;
+  background: #11254d;
 }
 
-/* Футер */
 footer {
   text-align: center;
-  padding: 20px;
-  background-color: #0d1a33;
+  background: #0d1a33;
   color: white;
-  font-size: 0.9rem;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 20px 5%;
+  }
 }
