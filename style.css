@@ -1,122 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Marcellus&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Cinzel+Decorative:wght@400;700&display=swap');
 
 :root {
-  --gold: #f7d67b;
-  --text-light: #f7e9c2;
-  --section-bg: rgba(45, 25, 10, 0.65);
-  --shadow-light: rgba(255, 230, 160, 0.4);
-  --overlay-dark: rgba(5, 5, 0, 0.85);
+  --primary-color: #2a9d8f;
+  --secondary-color: #264653;
+  --text-color: #f5f5f5;
+  --bg-color: #1a1a1a;
+  --accent-color: #e9c46a;
 }
 
 /* Общие стили */
-* { box-sizing: border-box; }
 body {
   margin: 0;
   padding: 0;
   font-family: 'Marcellus', serif;
-  color: var(--text-light);
-  background: url('images/hogwarts-hall-bg.jpg') center/cover fixed no-repeat;
-  overflow-x: hidden;
-  position: relative;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
-/* Свечное мерцание */
-.overlay {
-  position: fixed; inset: 0;
-  background: radial-gradient(circle at 50% 20%, rgba(255, 215, 130, 0.15), var(--overlay-dark) 80%);
-  pointer-events: none;
-  z-index: 2;
-  animation: candleFlicker 3s infinite alternate;
-}
-@keyframes candleFlicker {
-  0% { opacity: 0.14; }
-  50% { opacity: 0.22; }
-  100% { opacity: 0.15; }
-}
+a { text-decoration: none; color: var(--accent-color); }
+ul { list-style: none; padding: 0; margin: 0; }
 
-/* Header */
-header {
+/* Навигация */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: var(--secondary-color);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.navbar .logo { font-family: 'Cinzel Decorative', cursive; font-size: 1.8rem; color: var(--accent-color); }
+.nav-links li { display: inline-block; margin-left: 25px; }
+.nav-links li a { font-size: 1rem; transition: 0.3s; }
+.nav-links li a:hover { color: var(--primary-color); }
+
+/* Hero section */
+.hero-section {
   text-align: center;
-  padding: 140px 20px 100px;
-  position: relative;
-  z-index: 3;
+  padding: 150px 20px;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('images/animals-bg.jpg') center/cover no-repeat;
 }
-header h1 {
-  font-family: 'Cinzel Decorative', cursive;
-  font-size: 4rem;
-  color: var(--gold);
-  text-shadow: 0 0 35px var(--shadow-light);
-  margin-bottom: 15px;
-}
-header .subtitle {
-  font-size: 1.3rem;
-  color: var(--text-light);
-  text-shadow: 0 0 15px var(--shadow-light);
-}
+.hero-section h1 { font-family: 'Cinzel Decorative', cursive; font-size: 3rem; color: var(--accent-color); margin-bottom: 20px; }
+.hero-section p { font-size: 1.2rem; max-width: 600px; margin: 0 auto; }
 
 /* Sections */
-main { position: relative; z-index: 3; }
-section {
+.section {
   max-width: 900px;
   margin: 80px auto;
-  padding: 40px 25px;
-  text-align: center;
-  background: var(--section-bg);
+  padding: 50px 25px;
+  background-color: rgba(38,70,83,0.8);
   border-radius: 15px;
-  box-shadow: 0 0 50px rgba(255, 210, 130, 0.25);
-  backdrop-filter: blur(3px);
 }
-section h2 {
-  font-family: 'Cinzel Decorative', cursive;
-  font-size: 2.4rem;
-  color: var(--gold);
-  text-shadow: 0 0 15px var(--shadow-light);
-  margin-bottom: 20px;
-}
-section p {
-  font-size: 1.15rem;
-  line-height: 1.9;
-  margin-bottom: 30px;
-}
+.section h2 { font-family: 'Cinzel Decorative', cursive; font-size: 2.2rem; color: var(--accent-color); margin-bottom: 20px; text-align: center; }
+.section p, .section ul { font-size: 1.1rem; line-height: 1.8; }
 
-/* Галерея и видео */
-.gallery {
+/* Cards */
+.cards {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
-  perspective: 1000px;
+  gap: 25px;
+  margin-top: 30px;
 }
-.animated-video {
-  width: 280px;
-  height: 180px;
+.card {
+  background-color: rgba(42,157,143,0.85);
+  padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 0 40px var(--shadow-light);
-  object-fit: cover;
-  transition: transform 0.6s ease, box-shadow 0.6s ease, filter 0.6s ease;
-  animation: floatVideo 6s ease-in-out infinite;
+  flex: 1 1 250px;
+  max-width: 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
-@keyframes floatVideo {
-  0%   { transform: translateY(0px) rotateY(0deg); }
-  25%  { transform: translateY(-5px) rotateY(1deg); }
-  50%  { transform: translateY(0px) rotateY(0deg); }
-  75%  { transform: translateY(5px) rotateY(-1deg); }
-  100% { transform: translateY(0px) rotateY(0deg); }
-}
-.animated-video:hover {
-  transform: scale(1.15) rotateY(3deg);
-  box-shadow: 0 0 60px rgba(255, 240, 180, 0.7);
-  filter: brightness(1.1);
-}
+.card:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+
+/* Form */
+form { display: flex; flex-direction: column; gap: 15px; max-width: 500px; margin: 0 auto; }
+input, textarea { padding: 12px; border-radius: 8px; border: none; font-size: 1rem; }
+button { padding: 12px; border-radius: 8px; border: none; background-color: var(--accent-color); color: var(--secondary-color); font-weight: bold; cursor: pointer; transition: 0.3s; }
+button:hover { background-color: var(--primary-color); color: var(--text-color); }
 
 /* Footer */
-footer {
-  text-align: center;
-  padding: 50px 20px;
-  font-size: 1rem;
-  color: var(--text-light);
-  background: rgba(15, 10, 0, 0.65);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  z-index: 3;
-  position: relative;
-}
+footer { text-align: center; padding: 40px 20px; background-color: var(--secondary-color); color: var(--accent-color); }
