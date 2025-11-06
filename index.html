@@ -62,7 +62,7 @@
         <li>Контролирует вес и предотвращает ожирение</li>
         <li>Повышает выносливость и активность животных</li>
       </ul>
-      <p>Для получения подробной информации рекомендуем обращаться к ветеринарным источникам и проверенным статьям.</p>
+      <p>Для получения подробной информации рекомендуется обращаться к ветеринарным источникам и проверенным статьям.</p>
     </section>
 
     <!-- Практические советы -->
@@ -83,9 +83,18 @@
       <h2>Свяжитесь с нами</h2>
       <p>Оставьте сообщение, если у вас есть вопросы или нужна консультация:</p>
       <form action="https://formspree.io/f/yourformid" method="POST">
-        <input type="text" name="name" placeholder="Ваше имя" required>
-        <input type="email" name="_replyto" placeholder="Ваш Email" required>
-        <textarea name="message" placeholder="Сообщение" required></textarea>
+        <label>
+          Ваше имя
+          <input type="text" name="name" placeholder="Ваше имя" required>
+        </label>
+        <label>
+          Ваш Email
+          <input type="email" name="_replyto" placeholder="Ваш Email" required>
+        </label>
+        <label>
+          Сообщение
+          <textarea name="message" placeholder="Сообщение" required></textarea>
+        </label>
         <button type="submit">Отправить</button>
       </form>
     </section>
