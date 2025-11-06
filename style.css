@@ -1,16 +1,14 @@
-/* Общие стили */
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
   background: #f8f9fa;
-  color: #000; /* текст черный */
+  color: #000;
 }
 
-/* Шапка / Навигация */
 .navbar {
   display: flex;
   align-items: center;
-  background: #0d1a33; /* темно-синий цвет */
+  background: #0d1a33;
   padding: 10px 20px;
   color: white;
 }
@@ -33,7 +31,6 @@ body {
   font-weight: bold;
 }
 
-/* Секции */
 .section {
   padding: 40px 20px;
   max-width: 900px;
@@ -67,7 +64,6 @@ body {
   margin-bottom: 10px;
 }
 
-/* Галерея животных */
 .animal-images {
   display: flex;
   justify-content: center;
@@ -84,7 +80,6 @@ body {
   box-shadow: 0 3px 8px rgba(0,0,0,0.3);
 }
 
-/* Футер */
 footer {
   text-align: center;
   padding: 15px;
@@ -93,7 +88,6 @@ footer {
   margin-top: 20px;
 }
 
-/* Адаптив */
 @media (max-width: 600px) {
   .animal-images {
     flex-direction: column;
