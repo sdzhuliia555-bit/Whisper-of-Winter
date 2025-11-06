@@ -8,6 +8,7 @@
   <link rel="icon" href="images/logo.jpg" type="image/jpeg">
 </head>
 <body>
+
   <!-- Навигация -->
   <nav class="navbar">
     <div class="logo">
@@ -25,7 +26,7 @@
 
   <!-- Баннер -->
   <section class="banner" id="home">
-    <img src="images/banner.jpg" alt="Здоровое питание собак и кошек">
+    <img src="images/banner.jpg" alt="Здоровое питание собак и кошек" class="banner-img">
     <div class="banner-text">
       <h1>DogsCats — забота о здоровье животных</h1>
       <p>Научно проверенные рекомендации по питанию для собак и кошек</p>
@@ -37,7 +38,7 @@
     <section id="biochemistry" class="section">
       <h2>Биохимия питания</h2>
       <p>
-        Каждое животное нуждается в сбалансированном рационе, который обеспечивает все необходимые макро- и микронутриенты:
+        Правильное питание обеспечивает все необходимые макро- и микронутриенты:
       </p>
       <ul>
         <li><strong>Белки:</strong> рост и восстановление тканей</li>
@@ -55,22 +56,22 @@
     <section id="veterinary" class="section">
       <h2>Ветеринарные исследования</h2>
       <p>
-        Научные исследования подтверждают, что правильное питание:
+        Исследования показывают, что правильное питание:
       </p>
       <ul>
         <li>Снижает риск заболеваний почек и печени</li>
         <li>Контролирует вес и предотвращает ожирение</li>
         <li>Повышает выносливость и активность животных</li>
       </ul>
-      <p>Для получения подробной информации рекомендуется обращаться к ветеринарным источникам и проверенным статьям.</p>
+      <p>Подробные источники и статьи доступны у ветеринаров и научных публикаций.</p>
     </section>
 
     <!-- Практические советы -->
     <section id="practical" class="section">
       <h2>Практические советы</h2>
       <p>
-        Чтобы составить рацион правильно, учитывайте возраст, вид и активность питомца.  
-        Используйте качественные ингредиенты, избегайте излишков жиров и сахара.
+        Учитывайте возраст, вид и активность питомца при составлении рациона.  
+        Используйте качественные ингредиенты и избегайте избытка жиров и сахара.
       </p>
       <div class="animal-images">
         <img src="images/dog2.jpg" alt="Собака ест">
@@ -81,20 +82,11 @@
     <!-- Контакты -->
     <section id="contact" class="section">
       <h2>Свяжитесь с нами</h2>
-      <p>Оставьте сообщение, если у вас есть вопросы или нужна консультация:</p>
-      <form action="https://formspree.io/f/yourformid" method="POST">
-        <label>
-          Ваше имя
-          <input type="text" name="name" placeholder="Ваше имя" required>
-        </label>
-        <label>
-          Ваш Email
-          <input type="email" name="_replyto" placeholder="Ваш Email" required>
-        </label>
-        <label>
-          Сообщение
-          <textarea name="message" placeholder="Сообщение" required></textarea>
-        </label>
+      <p>Есть вопросы? Напишите нам:</p>
+      <form action="https://formspree.io/f/yourformid" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="email" name="_replyto" placeholder="Ваш Email" required>
+        <textarea name="message" placeholder="Сообщение" rows="5" required></textarea>
         <button type="submit">Отправить</button>
       </form>
     </section>
@@ -102,7 +94,8 @@
 
   <footer>
     <p>© 2025 DogsCats · Научная информация для здоровья животных</p>
-    <p>Все данные основаны на ветеринарных исследованиях</p>
+    <p>Все данные основаны на проверенных исследованиях</p>
   </footer>
+
 </body>
 </html>
