@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Cinzel+Decorative:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
 
 :root {
-  --primary-color: #8B5E3C;
-  --secondary-color: #5C3A21;
-  --text-color: #F5E6D3;
-  --bg-color: #3B2F2F;
-  --accent-color: #D9A066;
+  --primary-color: #1B4F72; /* морской */
+  --secondary-color: #556B2F; /* темно-оливковый */
+  --text-color: #3B2F2F; /* темный текст */
+  --bg-color: #FFFFFF; /* белый фон */
+  --accent-color: #2E8B57; /* зеленый акцент */
 }
 
 /* Общие стили */
@@ -16,7 +16,7 @@ body {
   color: var(--text-color);
 }
 
-a { text-decoration: none; color: var(--accent-color); }
+a { text-decoration: none; color: var(--primary-color); }
 ul { list-style: none; padding: 0; margin: 0; }
 
 /* Навигация */
@@ -24,29 +24,41 @@ ul { list-style: none; padding: 0; margin: 0; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 50px;
+  padding: 15px 50px;
   background-color: var(--secondary-color);
+  color: white;
   position: sticky;
   top: 0;
   z-index: 10;
 }
-.navbar .logo { font-family: 'Cinzel Decorative', cursive; font-size: 1.8rem; color: var(--accent-color); }
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+.navbar .logo-img {
+  width: 40px;
+  height: 40px;
+}
 .nav-links li { display: inline-block; margin-left: 25px; }
 .nav-links li a { font-size: 1rem; transition: 0.3s; }
-.nav-links li a:hover { color: var(--primary-color); }
+.nav-links li a:hover { color: var(--accent-color); }
 
 /* Баннер */
 .banner {
   position: relative;
   text-align: center;
-  color: var(--text-color);
+  color: white;
 }
 .banner img {
   width: 100%;
   height: auto;
   display: block;
   object-fit: cover;
-  filter: brightness(0.75);
+  background-color: var(--primary-color);
 }
 .banner-text {
   position: absolute;
@@ -54,39 +66,22 @@ ul { list-style: none; padding: 0; margin: 0; }
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.banner-text h1 { font-family: 'Cinzel Decorative', cursive; font-size: 3rem; color: var(--accent-color); margin-bottom: 10px; }
+.banner-text h1 { font-size: 2.8rem; margin-bottom: 10px; }
 .banner-text p { font-size: 1.2rem; }
 
-/* Sections */
+/* Секции */
 .section {
   max-width: 900px;
-  margin: 80px auto;
-  padding: 50px 25px;
-  background-color: rgba(92,58,33,0.85);
-  border-radius: 15px;
+  margin: 60px auto;
+  padding: 40px 25px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
-.section h2 { font-family: 'Cinzel Decorative', cursive; font-size: 2.2rem; color: var(--accent-color); margin-bottom: 20px; text-align: center; }
+.section h2 { font-size: 2rem; margin-bottom: 20px; color: var(--primary-color); text-align: center; }
 .section p, .section ul { font-size: 1.1rem; line-height: 1.8; }
 
-/* Cards */
-.cards {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 25px;
-  margin-top: 30px;
-}
-.card {
-  background-color: rgba(139,94,60,0.85);
-  padding: 25px;
-  border-radius: 12px;
-  flex: 1 1 250px;
-  max-width: 300px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.card:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-
-/* Изображения животных */
+/* Галерея изображений животных */
 .animal-images {
   display: flex;
   justify-content: center;
@@ -96,8 +91,8 @@ ul { list-style: none; padding: 0; margin: 0; }
 }
 .animal-images img {
   width: 280px;
-  border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 /* Контактная форма */
@@ -110,30 +105,27 @@ form {
 }
 input, textarea {
   padding: 12px;
-  border-radius: 8px;
-  border: none;
+  border-radius: 6px;
+  border: 1px solid #ccc;
   font-size: 1rem;
-  background-color: #e9d8c4;
-  color: #3b2f2f;
-  resize: none;
 }
-input:focus, textarea:focus { outline: 2px solid #d9a066; }
+textarea { resize: none; }
 button {
   padding: 12px;
-  border-radius: 8px;
+  border-radius: 6px;
   border: none;
-  background-color: #d9a066;
-  color: #3b2f2f;
+  background-color: var(--accent-color);
+  color: white;
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
 }
-button:hover { background-color: #8b5e3c; color: #f5e6d3; }
+button:hover { background-color: var(--primary-color); }
 
 /* Footer */
 footer {
   text-align: center;
-  padding: 40px 20px;
+  padding: 30px 20px;
   background-color: var(--secondary-color);
-  color: var(--accent-color);
+  color: white;
 }
