@@ -79,7 +79,7 @@ section p {
   margin-bottom: 30px;
 }
 
-/* Галерея животных */
+/* Галерея и видео */
 .gallery {
   display: flex;
   justify-content: center;
@@ -87,23 +87,23 @@ section p {
   gap: 20px;
   perspective: 1000px;
 }
-.animated-img {
+.animated-video {
   width: 280px;
   height: 180px;
-  object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 0 40px var(--shadow-light);
+  object-fit: cover;
   transition: transform 0.6s ease, box-shadow 0.6s ease, filter 0.6s ease;
-  animation: floatAnimal 6s ease-in-out infinite;
+  animation: floatVideo 6s ease-in-out infinite;
 }
-@keyframes floatAnimal {
+@keyframes floatVideo {
   0%   { transform: translateY(0px) rotateY(0deg); }
   25%  { transform: translateY(-5px) rotateY(1deg); }
   50%  { transform: translateY(0px) rotateY(0deg); }
   75%  { transform: translateY(5px) rotateY(-1deg); }
   100% { transform: translateY(0px) rotateY(0deg); }
 }
-.animated-img:hover {
+.animated-video:hover {
   transform: scale(1.15) rotateY(3deg);
   box-shadow: 0 0 60px rgba(255, 240, 180, 0.7);
   filter: brightness(1.1);
