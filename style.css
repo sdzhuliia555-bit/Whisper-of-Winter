@@ -64,8 +64,8 @@ body {
 }
 
 .animal-images img {
-  width: 280px;
-  height: 280px;
+  width: 736px;
+  height: 460px;
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.4);
