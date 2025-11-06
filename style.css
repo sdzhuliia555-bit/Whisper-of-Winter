@@ -1,22 +1,22 @@
 /* Общие стили */
-/* === Общие стили === */
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
-  background-color: #f8f9fa;
+  background: #f8f9fa;
   color: #333;
-  text-align: center; /* Центровка текста по умолчанию */
+  text-align: center; /* Центрирование текста */
 }
 
-/* === Шапка === */
+/* Шапка */
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: center; /* Центровка логотипа */
+  justify-content: center;
   background-color: #0d1a33;
-  padding: 10px 20px;
+  padding: 15px;
   color: white;
 }
+
 .logo-img {
   width: 50px;
   height: 50px;
@@ -24,92 +24,68 @@ body {
   object-fit: cover;
   margin-right: 10px;
 }
-.logo span {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
 
-/* === Основной контент === */
-main {
-  padding: 20px 10%;
-}
-
-h2 {
-  margin-top: 30px;
-  margin-bottom: 15px;
-}
-
-p {
-  margin-bottom: 15px;
-  font-size: 1.1rem;
+/* Секции */
+.section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 /* Списки */
-ul {
-  padding-left: 0;
-  list-style-position: inside;
-  max-width: 800px;
-  margin: 0 auto 20px auto;
-  text-align: center;
-}
-li {
-  margin-bottom: 10px;
-  font-size: 1rem;
+.section ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
 }
 
-/* === Фото животных === */
-.animal-image {
+.section ul li {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+/* Фото растянутое */
+.animal-image img {
   width: 100%;
   max-width: 1200px;
   height: auto;
-  border-radius: 10px;
-  object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  margin: 30px 0;
+  border-radius: 8px;
+  margin: 20px 0;
 }
 
-/* === Контактная форма === */
+/* Контактная форма */
 .contact-form {
-  max-width: 500px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 15px;
-  text-align: center;
+  max-width: 450px;
+  margin: 0 auto;
 }
+
 .contact-form input,
 .contact-form textarea {
   padding: 10px;
-  font-size: 1rem;
-  border-radius: 5px;
   border: 1px solid #999;
-  text-align: center;
-}
-.contact-form button {
-  padding: 10px;
-  font-size: 1rem;
   border-radius: 5px;
-  border: none;
+  font-size: 1rem;
+}
+
+.contact-form button {
   background-color: #0d1a33;
   color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
+
 .contact-form button:hover {
   background-color: #11254d;
 }
 
-/* === Футер === */
+/* Футер */
 footer {
-  text-align: center;
   background-color: #0d1a33;
   color: white;
   padding: 20px;
-  margin-top: 40px;
-}
-
-/* === Адаптивность === */
-@media (max-width: 768px) {
-  main {
-    padding: 20px 5%;
-  }
 }
