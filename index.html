@@ -1,91 +1,51 @@
-/* Общие стили */
-body {
-  margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  background: #f8f9fa;
-  color: #333;
-}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dogs&Cats — Научно о питании животных</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo.jpg" type="image/jpeg">
+</head>
+<body>
 
-/* Шапка */
-.navbar {
-  display: flex;
-  align-items: center;
-  background-color: #0d1a33; /* темно-синий */
-  padding: 10px 20px;
-  color: white;
-}
+  <!-- Шапка с логотипом -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="logo.jpg" alt="Dogs&Cats Logo" class="logo-img">
+      <span>Dogs&Cats</span>
+    </div>
+  </nav>
 
-.logo-img {
-  width: 50px;
-  height: 50px;
-  border-radius: 8px;
-  object-fit: cover;
-  margin-right: 10px;
-}
+  <main>
+    <!-- Фото собаки и кошки на всю ширину -->
+    <section class="section">
+      <div class="animal-images">
+        <img src="СatsDogs.jpg" alt="Собаки и кошки">
+      </div>
+    </section>
 
-.logo span {
-  font-weight: bold;
-  font-size: 1.5rem;
-}
+    <!-- Контактная форма -->
+    <section id="contact" class="section">
+      <h2>Свяжитесь с нами</h2>
+      <form action="https://formspree.io/f/xovpgygo" method="POST" class="contact-form">
+        <label for="name">Ваше имя</label>
+        <input type="text" id="name" name="name" placeholder="Ваше имя" required>
 
-/* Секции */
-.section {
-  padding: 40px 10%;
-}
+        <label for="email">Ваш Email</label>
+        <input type="email" id="email" name="_replyto" placeholder="Ваш Email" required>
 
-/* Текст */
-.section h2 {
-  text-align: center;
-  margin-bottom: 15px;
-}
+        <label for="message">Сообщение</label>
+        <textarea id="message" name="message" rows="5" placeholder="Сообщение" required></textarea>
 
-.section p, .section ul {
-  text-align: center;
-}
+        <button type="submit">Отправить</button>
+      </form>
+    </section>
+  </main>
 
-/* Галерея / фото */
-.animal-images img {
-  width: 100%;      /* растягиваем по ширине блока */
-  height: auto;     /* сохраняем пропорции */
-  display: block;   /* убираем лишние пробелы под картинкой */
-  border-radius: 8px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
-}
+  <footer>
+    <p>© 2025 Dogs&Cats · Научная информация для здоровья животных</p>
+  </footer>
 
-/* Контактная форма */
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.contact-form input, .contact-form textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-.contact-form button {
-  background-color: #0d1a33;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.contact-form button:hover {
-  background-color: #11254d;
-}
-
-/* Футер */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #0d1a33;
-  color: white;
-  font-size: 0.9rem;
-}
+</body>
+</html>
