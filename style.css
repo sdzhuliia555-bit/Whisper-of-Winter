@@ -84,9 +84,12 @@ ul { list-style: none; padding: 0; margin: 0; }
   width: 280px;
   border-radius: 6px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+}
+.animal-images img:hover {
+  transform: scale(1.05);
 }
 
-/* Контактная форма */
 form {
   display: flex;
   flex-direction: column;
