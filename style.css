@@ -36,22 +36,15 @@ body {
 }
 .animal-image {
   width: 100%;
+  max-height: 500px;
   height: auto;
   display: block;
-  border-radius: 10px;
-  margin: 20px 0;
   object-fit: cover;
-
-  /* Улучшение качества и резкости */
-  image-rendering: auto; /* стандартное сглаживание */
+  image-rendering: auto;
   filter: contrast(1.05) brightness(1.05) saturate(1.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
   transition: transform 0.3s ease, filter 0.3s ease;
-
-  /* Тень для объёма */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
-
-/* Эффект при наведении */
 .animal-image:hover {
   transform: scale(1.02);
   filter: contrast(1.1) brightness(1.08) saturate(1.15);
@@ -82,7 +75,7 @@ body {
   flex-direction: column;
   gap: 10px;
   max-width: 400px;
-  margin: 0 auto 50px; /* добавляем отступ снизу для футера */
+  margin: 0 auto 50px; /* отступ от футера */
 }
 .contact-form input,
 .contact-form textarea {
