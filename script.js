@@ -1,29 +1,14 @@
-// Плавная прокрутка навигации
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    const target = document.querySelector(link.getAttribute('href'));
-    target.scrollIntoView({ behavior: 'smooth' });
-  });
-});
+document.addEventListener("DOMContentLoaded", () => {
+  // === Анимация появления фото при скролле ===
+  const images = document.querySelectorAll(".animal-images img");
 
-// Обработка формы
-const form = document.getElementById('contact-form');
-form.addEventListener('submit', function(e) {
-  e.preventDefault();
-  const formData = new FormData(form);
-  fetch(form.action, {
-    method: 'POST',
-    body: formData,
-    headers: { 'Accept': 'application/json' }
-  })
-  .then(response => {
-    if(response.ok){
-      alert('Сообщение успешно отправлено!');
-      form.reset();
-    } else {
-      alert('Ошибка отправки. Попробуйте позже.');
-    }
-  })
-  .catch(() => alert('Ошибка отправки. Попробуйте позже.'));
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("fade-in");
+      }
+    });
+  }, { threshold: 0.5 });
+
+  images.forEach(img => observer.observe(img));
 });
