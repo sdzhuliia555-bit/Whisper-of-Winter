@@ -29,18 +29,21 @@ body {
 .banner-text {
   background: rgba(13,26,51,0.75);
   padding: 20px; border-radius:8px; text-align:center;
-  color: white;
+  color: white; /* ВСЁ белое */
 }
-.banner-text h1 { margin:0 0 10px 0; font-size:2.5rem; }
-.banner-text p { margin:0; font-size:1.2rem; }
+.banner-text h1, .banner-text p {
+  color: white; /* белый текст */
+}
 
-/* Секции */
-.section { padding:50px 10%; border-radius:8px; margin-bottom:20px; color:white; }
-.dark-banner { background:#0b2240; }
-.dark-banner-alt { background:#112a50; }
-.section-content { max-width:900px; margin:0 auto; text-align:center; }
+/* Секции с темным фоном */
+.section.dark-banner, .section.dark-banner-alt {
+  color: white; /* белый текст для всех элементов внутри */
+}
+.section.dark-banner ul li, .section.dark-banner-alt ul li {
+  color: white; /* белый текст для списков */
+}
 
-/* Галерея */
+/* Галерея животных */
 .animal-images { display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:25px; }
 .animal-images img { width:280px; height:180px; object-fit:cover; border-radius:8px; box-shadow:0 3px 8px rgba(0,0,0,0.5); }
 
