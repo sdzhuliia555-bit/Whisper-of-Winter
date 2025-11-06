@@ -2,134 +2,53 @@
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
-  background: #f8f9fa; /* светлый фон */
+  background: #ffffff; /* белый фон */
   color: #000; /* черный текст */
   line-height: 1.6;
+  text-align: center; /* текст по центру */
 }
 
 /* === Навигация / Шапка === */
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background: #0d1a33; /* темно-синий фон */
-  padding: 10px 40px;
-  color: white;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  padding: 15px 20px;
 }
+
 .logo-img {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 8px;
   object-fit: cover;
-  margin-right: 10px;
-}
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  margin: 0;
-  padding: 0;
-}
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-}
-.nav-links a:hover {
-  text-decoration: underline;
 }
 
-/* === Баннер (только шапка) === */
-.banner-text {
-  max-width: 700px;
-  text-align: center;
-  padding: 20px;
-}
-.banner-text h1 {
-  font-size: 2rem;
-  margin: 0 0 10px 0;
-  color: white;
-}
-.banner-text p {
-  font-size: 1.1rem;
-  color: white;
-}
-
-/* === Секции контента === */
+/* === Секция с фото животных === */
 .section {
   padding: 50px 10%;
   margin: 20px auto;
-  background-color: #ffffff; /* белый фон */
-  color: #000; /* черный текст */
-  border-radius: 8px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
-/* Заголовки */
 .section h2 {
   font-size: 2rem;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
-/* Списки */
-.section ul {
-  margin: 10px 0 20px 20px;
-}
-.section ul li {
-  margin-bottom: 10px;
-}
-
-/* === Галерея животных === */
+/* Галерея животных */
 .animal-images {
   display: flex;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
-  margin-top: 25px;
-}
-.animal-images img {
-  width: 280px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.animal-images img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
 }
 
-/* === Контактная форма === */
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 450px;
-  margin: 0 auto;
-}
-.contact-form input,
-.contact-form textarea {
-  padding: 12px;
-  border: 1px solid #999;
-  border-radius: 5px;
-  font-size: 1rem;
-  color: #000;
-}
-.contact-form button {
-  background: #0d1a33;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-}
-.contact-form button:hover {
-  background: #11254d;
+.animal-images img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 /* === Футер === */
@@ -139,56 +58,12 @@ footer {
   color: white;
   padding: 20px;
   font-size: 0.9rem;
-  margin-top: 40px;
 }
 
-/* === Адаптив === */
-@media (max-width: 1200px) {
-  .navbar {
-    padding: 10px 20px;
-  }
-}
-
-@media (max-width: 992px) {
-  .banner-text h1 {
-    font-size: 1.8rem;
-  }
-  .banner-text p {
-    font-size: 1rem;
-  }
-  .section {
-    padding: 40px 8%;
-  }
-}
-
+/* === Адаптивность === */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-  }
   .animal-images img {
     width: 90%;
     height: auto;
-  }
-  .section {
-    padding: 30px 5%;
-  }
-}
-
-@media (max-width: 480px) {
-  .banner-text h1 {
-    font-size: 1.5rem;
-  }
-  .banner-text p {
-    font-size: 0.95rem;
-  }
-  .contact-form {
-    width: 100%;
   }
 }
