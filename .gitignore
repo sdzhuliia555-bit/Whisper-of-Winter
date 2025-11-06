@@ -1,1 +1,19 @@
+# Node / npm
+node_modules/
+npm-debug.log
 
+# IDE / редакторы
+.vscode/
+.idea/
+
+# Кэш браузера / системы
+.DS_Store
+Thumbs.db
+
+# Изображения и временные файлы
+*.tmp
+*.bak
+
+# Папки сборки
+dist/
+build/
