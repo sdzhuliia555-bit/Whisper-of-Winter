@@ -2,21 +2,17 @@
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
-  background: #ffffff;
-  color: #000000;
+  background: #f8f9fa;
+  color: #333;
 }
 
-/* Шапка / навигация */
+/* Шапка */
 .navbar {
   display: flex;
   align-items: center;
-  padding: 10px 20px;
   background-color: #0b2240; /* темно-синий */
+  padding: 10px 20px;
   color: white;
-}
-.logo {
-  display: flex;
-  align-items: center;
 }
 .logo-img {
   width: 50px;
@@ -26,29 +22,24 @@ body {
   margin-right: 10px;
 }
 .logo span {
-  font-size: 1.5rem;
   font-weight: bold;
+  font-size: 1.3rem;
 }
 
 /* Секции */
 .section {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
+  padding: 40px 10%;
   text-align: center;
 }
+
 .section h2 {
+  font-size: 2rem;
   margin-bottom: 15px;
 }
-.section p {
-  margin-bottom: 15px;
-}
-.section ul {
-  list-style-type: disc;
-  margin: 0 auto 20px auto;
-  padding-left: 20px;
-  text-align: left;
-  display: inline-block;
+
+.section p, .section ul li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
 }
 
 /* Галерея животных */
@@ -57,6 +48,7 @@ body {
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
+  margin-top: 25px;
 }
 .animal-images img {
   width: 280px;
@@ -68,46 +60,68 @@ body {
 
 /* Контактная форма */
 .contact-form {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 25px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
   gap: 15px;
-  max-width: 400px;
-  margin: 0 auto;
 }
+
+.contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.contact-form label {
+  font-weight: 600;
+  color: #0b2240;
+}
+
 .contact-form input,
 .contact-form textarea {
   padding: 10px;
-  border: 1px solid #999;
-  border-radius: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
   font-size: 1rem;
 }
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #0b2240;
+  box-shadow: 0 0 6px rgba(11,34,64,0.3);
+  outline: none;
+}
+
 .contact-form button {
-  padding: 10px;
-  background-color: #0b2240;
+  padding: 12px;
+  font-weight: 600;
+  background: #0b2240;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
 }
 .contact-form button:hover {
-  background-color: #11254d;
+  background: #11254d;
+  transform: translateY(-2px);
 }
 
 /* Футер */
 footer {
   text-align: center;
-  padding: 15px;
-  background-color: #f2f2f2;
-  color: #000000;
+  background: #0b2240;
+  color: white;
+  padding: 20px;
 }
 
 /* Адаптив */
 @media (max-width: 600px) {
-  .animal-images {
-    flex-direction: column;
-    align-items: center;
-  }
-  .section ul {
-    text-align: center;
-  }
+  .section { padding: 30px 5%; }
+  .animal-images img { width: 100%; height: auto; }
 }
