@@ -17,14 +17,14 @@
     </div>
   </nav>
 
-  <!-- Фото собак и кошек -->
-  <div class="photo-section">
-    <img src="catsdogs.jpg" alt="Собаки и кошки" class="animal-image">
-  </div>
-
-  <!-- Информация -->
   <main>
-    <section class="info-section">
+    <!-- Фото собак и кошек -->
+    <section class="photo-section">
+      <img src="catsdogs.jpg" alt="Собаки и кошки" class="animal-image">
+    </section>
+
+    <!-- Полезности для собак -->
+    <section class="info-section" id="dogs">
       <h2>Полезности для собак</h2>
       <p>Правильное питание и уход помогают вашему питомцу быть здоровым и активным.</p>
       <ul>
@@ -37,7 +37,8 @@
       </ul>
     </section>
 
-    <section class="info-section">
+    <!-- Полезности для кошек -->
+    <section class="info-section" id="cats">
       <h2>Полезности для кошек</h2>
       <p>Сбалансированное питание и уход делают кошку энергичной и счастливой.</p>
       <ul>
@@ -51,7 +52,7 @@
     </section>
 
     <!-- Контактная форма -->
-    <section class="info-section">
+    <section class="info-section" id="contact">
       <h2>Свяжитесь с нами</h2>
       <form action="https://formspree.io/f/xovpgygo" method="POST" class="contact-form">
         <label for="name">Ваше имя</label>
