@@ -22,32 +22,23 @@ body {
   border-radius: 8px;
   margin-right: 10px;
   object-fit: cover;
-  vertical-align: middle;
 }
 .navbar span {
   font-size: 1.5rem;
   font-weight: bold;
 }
 
-/* Фото */
+/* Фото высокого качества */
 .photo-section {
   width: 100%;
   overflow: hidden;
 }
 .animal-image {
-  width: 100%;
-  max-height: 500px;
-  height: auto;
+  width: 100%;        /* растянуть на всю ширину */
+  height: auto;       /* сохраняем пропорции */
   display: block;
-  object-fit: cover;
-  image-rendering: auto;
-  filter: contrast(1.05) brightness(1.05) saturate(1.1);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-.animal-image:hover {
-  transform: scale(1.02);
-  filter: contrast(1.1) brightness(1.08) saturate(1.15);
+  margin: 0 auto;
+  image-rendering: auto; /* качественный рендер */
 }
 
 /* Секции информации */
@@ -75,7 +66,7 @@ body {
   flex-direction: column;
   gap: 10px;
   max-width: 400px;
-  margin: 0 auto 50px; /* отступ от футера */
+  margin: 0 auto 50px; /* отступ снизу для футера */
 }
 .contact-form input,
 .contact-form textarea {
@@ -105,4 +96,14 @@ footer {
   padding: 20px;
   font-size: 0.9rem;
   margin-top: 50px;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .info-section {
+    padding: 20px 5%;
+  }
+  .contact-form {
+    max-width: 90%;
+  }
 }
